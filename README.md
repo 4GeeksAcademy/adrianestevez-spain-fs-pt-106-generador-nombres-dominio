@@ -1,3 +1,5 @@
+# Generador de nombres de dominio 💻
+
 ### Antes de empezar
 
 - `npm install`
