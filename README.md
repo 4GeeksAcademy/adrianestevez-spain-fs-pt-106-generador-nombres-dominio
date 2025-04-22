@@ -1,7 +1,7 @@
 ### Antes de empezar
 
 - `npm install`
-- `npm run start`
+- `npm run dev`
 
 ### No veo mis cambios...
 
