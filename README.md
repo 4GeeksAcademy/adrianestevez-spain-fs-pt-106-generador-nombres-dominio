@@ -17,10 +17,6 @@ Agrégalas dentro de la carpeta `./src/assets/img` y luego impórtalas desde cua
 
 Simplemente agrega los archivos en la carpeta src e importa los archivos/variables en tu app.js. Ejemplo: `import myVar from "./file2.js"`.
 
-### ¿Cómo publico el sitio web?
-
-Esta plantilla es 100% compatible con el alojamiento gratuito de GitHub Pages. Publica tu sitio web ejecutando:
-
 ```bash
-$ npm run deploy
+$ npm run build
 ```
