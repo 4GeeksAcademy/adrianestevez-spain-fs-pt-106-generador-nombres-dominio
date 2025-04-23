@@ -7,9 +7,9 @@ const adj = ["smart", "cloud", "nova", "data"];
 const noun = ["hub", "system", "space", "spot"];
 const ext = [".com", ".io", ".xyz", ".net"];
 
-/* He conseguido hacer una nueva versión, aun sin usar destructuración ni 
-spread operator. En cuanto pueda subo otra versión. Dejo comentado abajo como
-esta hecho antes.*/
+/* Nueva versión, aun sin usar destructuración ni spread operator. 
+En cuanto pueda subo otra versión. Dejo comentado abajo como
+estaba hecho antes.*/
 const getDomain = (arr, arr1, arr2, arr3) => {
   let newDomain;
   let count = 0;
