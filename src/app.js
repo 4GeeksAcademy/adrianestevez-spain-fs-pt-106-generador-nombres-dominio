@@ -7,41 +7,34 @@ const adj = ["smart", "cloud", "nova", "data"];
 const noun = ["hub", "system", "space", "spot"];
 const ext = [".com", ".io", ".xyz", ".net"];
 
-const domainList = [];
+/* He conseguido hacer una nueva versión, aun sin usar destructuración ni 
+spread operator. En cuanto pueda subo otra versión. Dejo comentado abajo como
+esta hecho antes.*/
+const getDomain = (arr, arr1, arr2, arr3) => {
+  let newDomain;
+  let count = 0;
+  const domainList = [];
 
-const genDomain = (arr, arr1, arr2, arr3) => {
-  const newDomain = [];
   for (let p of arr) {
-    newDomain.push(p); // the
-
     for (let a of arr1) {
-      newDomain.push(a); // the, smart
-
       for (let n of arr2) {
-        newDomain.push(n); // the, smart, hub
-
         for (let e of arr3) {
-          newDomain.push(e); // the, smart, hub, .com
-          domainList.push(newDomain.join(""));
-          newDomain.pop(); // the, smart, hub
+          newDomain = `${p}${a}${n}${e}`;
+          domainList[count] = newDomain;
+          count++;
         }
-
-        newDomain.pop(); // the, smart
       }
-
-      newDomain.pop(); // the
     }
-
-    newDomain.pop(); // [] 
   }
+
   return domainList;
-}
+};
 
-genDomain(pronoun, adj, noun, ext);
+const listadoDominios = getDomain(pronoun, adj, noun, ext);
 
-console.log(domainList);
+console.log(`Elementos en domainList: ${listadoDominios.length}`);
 
-const html = domainList.map((dominio) => {
+const html = listadoDominios.map((dominio) => {
   return `<li>${dominio}</li>`;
 });
 
@@ -49,3 +42,32 @@ const html = domainList.map((dominio) => {
 window.onload = () => {
   cajaDominios.innerHTML = html.join("");
 };
+
+//CÓDIGO ANTIGUO
+// const getDomain = (arr, arr1, arr2, arr3) => {
+//   const newDomain = [];
+//   for (let p of arr) {
+//     newDomain.push(p); // the
+
+//     for (let a of arr1) {
+//       newDomain.push(a); // the, smart
+
+//       for (let n of arr2) {
+//         newDomain.push(n); // the, smart, hub
+
+//         for (let e of arr3) {
+//           newDomain.push(e); // the, smart, hub, .com
+//           domainList.push(newDomain.join(""));
+//           newDomain.pop(); // the, smart, hub
+//         }
+
+//         newDomain.pop(); // the, smart
+//       }
+
+//       newDomain.pop(); // the
+//     }
+
+//     newDomain.pop(); // []
+//   }
+//   return domainList;
+// }
