@@ -7,10 +7,10 @@ const adj = ["smart", "cloud", "nova", "data"];
 const noun = ["hub", "system", "space", "spot"];
 const ext = [".com", ".io", ".xyz", ".net"];
 
-const newDomain = [];
 const domainList = [];
 
 const genDomain = (arr, arr1, arr2, arr3) => {
+  const newDomain = [];
   for (let p of arr) {
     newDomain.push(p); // the
 
